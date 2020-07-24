@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import home from './pages/home'
-import page1 from './pages/page1'
-import page2 from './pages/page2'
+import sasscss from './pages/sasscss'
+import cssscss from './pages/cssscss'
 
 import Header from './component/header'
 import Footer from './component/footer'
@@ -16,8 +16,8 @@ function App() {
       	<main>
       		<Switch>
       			<Route path="/" component={home} exact />
-      			<Route path="/page1" component={page1} />
-      			<Route path="/page2" component={page2} />
+      			<Route path="/sass-css" component={sasscss} />
+      			<Route path="/css-scss" component={cssscss} />
       		</Switch>
       	</main>
       	<Footer />

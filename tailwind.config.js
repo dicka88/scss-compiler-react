@@ -5,6 +5,7 @@ module.exports = {
     content: [
       './src/**/*.js',
       './src/**/*.jsx',
+      './public/**/*.html'
     ]
   },
   important: true,
