@@ -361,7 +361,8 @@ input::placeholder {
   color: #a0aec0;
 }
 
-button {
+button,
+[role="button"] {
   cursor: pointer;
 }
 

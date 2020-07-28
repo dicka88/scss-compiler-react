@@ -8,7 +8,7 @@ export default function header() {
     <header>
       <nav className="flex items-center justify-between flex-wrap bg-pink-700 p-6">
         <Link to="/" className="flex items-center flex-shrink-0 text-white mr-6">
-          <img src={Logo} style={{width: 'auto', height: '50px'}} className="mr-3 -mt-4 -mb-4" />
+          <img src={Logo} style={{width: 'auto', height: '50px'}} alt="Logo icon" className="mr-3 -mt-4 -mb-4" />
           <span className="font-semibold text-xl tracking-tight">SCSS Compiler</span>
         </Link>
         <div className="block lg:hidden">

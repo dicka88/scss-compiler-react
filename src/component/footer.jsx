@@ -13,7 +13,7 @@ export default function footer() {
                 SCSS : Syntactically Awesome Style Sheet is the superset of CSS. SCSS is the more advanced version of CSS. SCSS was designed by Hampton Catlin and was developed by Chris Eppstein and Natalie Weizenbaum.
               </p>
               <p>
-                <a href="https://sass-lang.com" target="_blank" rel="nofollow noreferrer" className="underline">> More about SCSS</a>
+                <a href="https://sass-lang.com" target="_blank" rel="nofollow noopener noreferrer" className="underline">> More about SCSS</a>
               </p>
             </div>
             <div className="px-6 py-4">
@@ -76,21 +76,21 @@ export default function footer() {
       </div>
       <div className="flex justify-end items-center bg-pink-900 text-white p-8 pr-12">
         <span>Follow us on</span>
-        <a href="https://instagram.com/dickaismaji" target="_blank" rel="nofollow noreferrer" className="ml-2" title="instagram">
+        <a href="https://instagram.com/dickaismaji" target="_blank" rel="nofollow noopener noreferrer" className="ml-2" title="instagram">
           <i className="fa fa-instagram"></i>
         </a>
-        <a href="https://facebook.com/dickaismaji" target="_blank" rel="nofollow noreferrer" className="ml-2" title="facebook">
+        <a href="https://facebook.com/dickaismaji" target="_blank" rel="nofollow noopener noreferrer" className="ml-2" title="facebook">
           <i className="fa fa-facebook-square"></i>
         </a>
-        <a href="https://github.com/dicka88" target="_blank" rel="nofollow noreferrer" className="ml-2" title="github">
+        <a href="https://github.com/dicka88" target="_blank" rel="nofollow noopener noreferrer" className="ml-2" title="github">
           <i className="fa fa-github-square"></i>
         </a>
-        <a href="https://linkedin.com/in/dickaismaji" target="_blank" rel="nofollow noreferrer" nofollow className="ml-2" title="linkedin">
+        <a href="https://linkedin.com/in/dickaismaji" target="_blank" rel="nofollow noopener noreferrer" className="ml-2" title="linkedin">
           <i className="fa fa-linkedin-square"></i>
         </a>
       </div>
       <div className="flex bg-gray-800 pt-1 pb-4 justify-center text-4md text-white">
-        <small>Build with ❤️ by <a className="underline" href="https://github.com/dicka88">Dicka Ismaji</a> for developers</small>
+        <small>Build with <span role="img" aria-label="love">❤️</span> by <a className="underline" href="https://github.com/dicka88">Dicka Ismaji</a> for developers</small>
       </div>
     </footer>
   )
