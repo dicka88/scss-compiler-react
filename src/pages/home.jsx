@@ -117,19 +117,19 @@ export default class Home extends Component {
               <img src={sassSvg} style={{height: '24px'}} alt="Icon SCSS Compiler" />
             </div>
             <div>
-              <button title="download" onClick={() => ''}>
+              <button title="download" onClick={() => this.handleDownload('scss')}>
                 <i className="material-icons">file_download</i>
               </button>
-              <button title="copy" data-clipboard-target="#scss-editor" onClick={() => ''}>
+              <button title="copy" data-clipboard-target="#scss-editor" onClick={() => this.handleCopy('scss')}>
                 <i className="material-icons">content_copy</i>
               </button>
-              <button title="clear" onClick={() => ''}>
+              <button title="clear" onClick={() => this.handleClear('scss')}>
                 <i className="material-icons">clear</i>
               </button>
-              <button title="beautify scss" onClick={() => ''}>
+              <button title="beautify scss" onClick={() => this.handleBeauty('scss')}>
                 <i className="material-icons">format_paint</i>
               </button>
-              <button title="fullscreen"onClick={() => ''}>
+              <button title="fullscreen"onClick={() => this.handleFullscreen('scss')}>
                 <i className="material-icons">fullscreen</i>
               </button>
             </div>
@@ -168,15 +168,15 @@ export default class Home extends Component {
               </span>
             </div>
             <div>
-              <button title="download" onClick={() => ''}>
-              <i className="material-icons">file_download</i>
-            </button>
-              <button title="copy" onClick={() => ''}>
-              <i className="material-icons">content_copy</i>
-            </button>
-              <button title="fullscreen" onClick={() => ''}>
-              <i className="material-icons">fullscreen</i>
-            </button>
+              <button title="download" onClick={() => this.handleDownload('css')}>
+                <i className="material-icons">file_download</i>
+              </button>
+              <button title="copy" onClick={() => this.handleCopy('css')}>
+                <i className="material-icons">content_copy</i>
+              </button>
+              <button title="fullscreen" onClick={() => this.handleFullscreen('css')}>
+                <i className="material-icons">fullscreen</i>
+              </button>
             </div>
           </div>
           <AceEditor
