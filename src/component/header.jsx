@@ -35,7 +35,7 @@ export default function header() {
             </Link>
           </div>
           <div>
-            <a href="https://github.com/dicka88/scss-compiler" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+            <a href="https://github.com/dicka88/scss-compiler-react" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
               <i className="fa fa-github"></i>
               <span> Github</span>
             </a>

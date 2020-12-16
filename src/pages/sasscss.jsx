@@ -4,7 +4,7 @@ import React from 'react'
 export default function footer() {
   return (
     <div>
-        <p>Page1</p>
+        <p>Soon</p>
     </div>
   )
 }

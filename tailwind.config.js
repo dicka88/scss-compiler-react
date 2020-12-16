@@ -1,12 +1,8 @@
 module.exports = {
   purge: {
-    enabled: true,
-    mode: 'all',
-    content: [
-      './src/**/*.js',
-      './src/**/*.jsx',
-      './public/**/*.html'
-    ]
+    enabled: process.env.NODE_ENV === "production",
+    mode: "all",
+    content: ["./src/**/*.js", "./src/**/*.jsx", "./public/**/*.html"],
   },
   important: true,
   theme: {
@@ -28,8 +24,8 @@ module.exports = {
         cyan: "#9cdbff",
       },
       margin: {
-        "96": "24rem",
-        "128": "32rem",
+        96: "24rem",
+        128: "32rem",
       },
     },
   },

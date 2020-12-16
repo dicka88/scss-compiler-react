@@ -15,11 +15,14 @@ import cssSvg from '../assets/images/css3-icon.svg'
 import sassSvg from '../assets/images/sass-icon.svg'
 
 export default class Home extends Component {
+  
   constructor(props) {
     super(props)
     this.state = {
       scssValue: '',
-      cssValue: ''
+      cssValue: '',
+      tabActive: 'scss',
+      activeButton: 'scss'
     }
 
     this.bounce = debounce(this.fetchScss, 1500)
@@ -32,6 +35,7 @@ export default class Home extends Component {
   // componentDidUpdate() {
 
   // }
+
   handleScssChange(props, a) {
     this.setState({
       scssValue: props
@@ -85,6 +89,26 @@ export default class Home extends Component {
     }
   }
 
+  handleTabSwitcher(tab) {
+    this.setState({
+      activeButton: tab
+    })
+
+    switch(tab) {
+      case 'scss':
+        this.setState({
+          tabActive: 'scss'
+        })
+        break
+      case 'css':
+        this.setState({
+          tabActive: 'css'
+        })
+        break
+      default:
+    }
+  }
+
   render() {
     return (
       <>
@@ -96,13 +120,13 @@ export default class Home extends Component {
         <div className="relative">
           <ul id="editor-switcher" className="flex border-b">
             <li className="mr-1">
-              <button id="editor-switcher_scss" onClick={() => ''} className="bg-white inline-block border-1 rounded-t py-2 px-4 hover:bg-pink-800 hover:text-white bg-pink-700 text-white font-semibold">SCSS</button>
+              <button id="editor-switcher_scss" onClick={() => this.handleTabSwitcher('scss')} className={`bg-white inline-block border-1 rounded-t py-2 px-4 hover:bg-pink-800 hover:text-white ${ this.state.activeButton === 'scss' && 'bg-pink-700 text-white font-semibold'}`}>SCSS</button>
             </li>
             <li className="mr-1">
-              <button id="editor-switcher_css" onClick={() => ''} className="bg-white inline-block border-1 rounded-t py-2 px-4 hover:bg-pink-800 hover:text-white">CSS</button>
+              <button id="editor-switcher_css" onClick={() => this.handleTabSwitcher('css')} className={`bg-white inline-block border-1 rounded-t py-2 px-4 hover:bg-pink-800 hover:text-white ${ this.state.activeButton === 'css' && 'bg-pink-700 text-white font-semibold'}`}>CSS</button>
             </li>
             <li className="mr-1">
-              <button id="editor-switcher_demo" onClick={() => ''} className="bg-white inline-block border-1 rounded-t py-2 px-4 hover:bg-pink-800 hover:text-white">DEMO</button>
+              <button id="editor-switcher_demo" onClick={() => this.handleTabSwitcher('demo')} className={`bg-white inline-block border-1 rounded-t py-2 px-4 hover:bg-pink-800 hover:text-white ${ this.state.activeButton === 'demo' && 'bg-pink-700 text-white font-semibold'}`}>DEMO</button>
             </li>
             <button onClick={this.fetchScss} className="convert-button text-white absolute right-0 mr-2 w-8 h-8">
               <i className="material-icons">play_arrow</i>
@@ -111,7 +135,7 @@ export default class Home extends Component {
         </div>
       </div>
       <div className="flex mb-4 relative">
-        <div className="w-1/2 xs:w-full mr-1 xs:mr-0 bg-gray-200 h-screen scss-wrapper">
+        <div className={`w-1/2 xs:w-full mr-1 xs:mr-0 bg-gray-200 h-screen scss-wrapper ${ this.state.tabActive !== 'scss' && 'xs:hidden' }`}>
           <div className="flex px-3 py-1 justify-between bg-white">
             <div style={{ margin: 'auto 0' }}>
               <img src={sassSvg} style={{height: '24px'}} alt="Icon SCSS Compiler" />
@@ -158,7 +182,7 @@ export default class Home extends Component {
             }}
             />
         </div>
-        <div className="w-1/2 xs:w-full ml-1 xs:ml-0 bg-gray-900 h-screen css-wrapper xs:hidden">
+        <div className={`w-1/2 xs:w-full ml-1 xs:ml-0 bg-gray-900 h-screen css-wrapper ${ this.state.tabActive !== 'css' && 'xs:hidden' }`}>
           <div className="flex px-3 py-1 justify-between bg-white">
             <div style={{ margin: 'auto 0' }} className="flex items-center justify-between">
               <img src={cssSvg} style={{height: '24px'}} alt="" />

@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function footer() {
   return (
-    <div>
-        <p>Page2</p>
+    <div className="container p-4 mt-5">
+      <p className="text-blue-300">Soon</p>
     </div>
   )
 }
